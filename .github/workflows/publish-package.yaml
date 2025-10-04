@@ -1,0 +1,27 @@
+name: Publish Package
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build package
+        run: npm run prepack
+
+      - name: Expose dist folder as CI asset
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist
