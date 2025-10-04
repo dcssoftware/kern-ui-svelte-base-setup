@@ -1,0 +1,38 @@
+/* Global styles for KERN web components */
+/* Note: KERN CSS is included via kern-styles.ts in components */
+:root {
+  /* Ensure KERN design tokens are available */
+  font-family:
+    'Fira Sans',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+}
+
+/* Base styles for all components */
+.kern-component {
+  font-family: var(--font-family-primary, 'Fira Sans', sans-serif);
+  box-sizing: border-box;
+}
+
+.kern-component *,
+.kern-component *::before,
+.kern-component *::after {
+  box-sizing: inherit;
+}
+
+/* Ensure KERN grid classes work on custom elements */
+kern-grid-container,
+kern-grid-row,
+kern-grid-col {
+  /* Inherit KERN grid styles */
+  box-sizing: border-box;
+}
+
+/* Apply grid styles to the custom elements themselves when they have KERN classes */
+kern-grid-col[class*='kern-col'] {
+  /* Ensure grid column elements can participate in flex layout */
+  display: block;
+}
