@@ -25,3 +25,5 @@ jobs:
         with:
           name: dist
           path: dist
+
+      # todo: publish on npm or another registry
