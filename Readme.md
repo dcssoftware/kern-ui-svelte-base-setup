@@ -2,5 +2,5 @@
 
 This is the foundation of a great svelte implementation of Schleswig-Holstein's KERN-UI
 
-Features & Implementation will follow when it's on OpenCode.  
-[KERN UI Svelte on OpenCode](https://gitlab.opencode.de/kern-ux/community?filter=svelte)
+We moved to OpenCode (GitLab)
+--->>> https://gitlab.opencode.de/kern-ux/community/kern-svelte-kit
